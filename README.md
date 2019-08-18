@@ -1,2 +1,2 @@
 # hello-world
-Tetando Repositório
+Tsetando Repositório
