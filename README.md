@@ -1,2 +1,2 @@
 # hello-world
-Testando Repositório
+Codigos dos exercicos praticados em cursos online.
