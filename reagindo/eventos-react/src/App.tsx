@@ -1,56 +1,57 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useEffect, useState } from 'react';
 import './App.css';
+import { Demo } from './components/Demo';
+import { IngredientList } from './components/IngredientList';
 
 import { RecipeTitle } from './components/RecipeTitle';
-import { IngredientList } from './components/IngredientList';
-import { PrepareRecipe } from './components/PrepareRecipe';
-
-const receita = {
-  title: 'Purê de batata',
-  feedback: {
-    rating: 4.8,
-    reviews: 20
-  },
-  ingredients: [
-    { name: '3 batatas, cortadas em pedaços de 1/2 ', prepared: false },
-    { name: '4 colheres de sopa de manteiga', prepared: false },
-    { name: '1/8 xícara de creme de leite', prepared: false },
-    { name: 'Sal', prepared: true },
-    { name: 'Pimenta', prepared: true },
-  ],
-  preparo: [
-    {passo: 'Adicione as batatas cortadas a uma panela com água e sal.'},
-    {passo: 'Leve a panela para ferver.'},
-    {passo: 'Ferva as batatas até ficarem macias, por cerca de 15 a 20 minutos.'},
-    {passo: 'Coe as batatas'},
-    {passo: 'Coloque-as novamente na panela.'},
-    {passo: 'Adicione a manteiga, o creme de leite, o sal e a pimenta a gosto.'},
-    {passo: 'Amasse as batatas.'},
-    {passo: 'Tempere novamente e adicione a manteiga e o creme de leite conforme desejado.'}
-  ]
-}
 
 function App() {
-  const numeros = [2,3,10]
-  
-  const numeroX2 = numeros.map((numero, index) => {
-    console.log(`Processing item ${index + 1}`);
-    return <div key={index}>{ numero * numero }</div>
-  });
 
-  console.log(
-    numeroX2
-  )
-return (
-  <div className="App">
-    <header className="App-header">
-      <RecipeTitle title={ receita.title } feedback={receita.feedback} />
-      <IngredientList ingredients={receita.ingredients} />
-      <PrepareRecipe preparo={receita.preparo} />
-    </header>
-  </div>
-);
+  const initialRecipe = {
+    title: 'Purê de batata',
+    feedback: {
+      rating: 4.8,
+      reviews: 20
+    },
+    ingredients: [
+      { name: '3 batatas, cortadas em pedaços de 1/2 ', prepared: false },
+      { name: '4 colheres de sopa de manteiga', prepared: false },
+      { name: '1/8 xícara de creme de leite', prepared: false },
+      { name: 'Sal', prepared: true },
+      { name: 'Pimenta', prepared: true },
+    ],
+  }
+
+  const [recipe, setRecipe] = useState(initialRecipe)
+  const [prepared, setPrepared] = useState(false)
+
+  // TODO: Create recipe state
+
+  // TODO: Add new state property
+
+  // TODO: Create ingredientClick event listener
+  function ingredientClick(index: number) {
+    const updateRecipe = { ...recipe }
+    updateRecipe.ingredients[index].prepared = !updateRecipe.ingredients[index].prepared;
+    setRecipe(updateRecipe)
+  }
+
+  // TODO: Add the effect hook
+  useEffect(() => {
+    setPrepared(recipe.ingredients.every(i => i.prepared))
+  }, [recipe])
+
+  return (
+    <div className="App">
+      <Demo></Demo>
+      <header className="App-header">
+        <RecipeTitle title={recipe.title} feedback={recipe.feedback} />
+        <IngredientList ingredients={recipe.ingredients} onClick={ingredientClick} />
+        {/* TODO: Add the prep work display */}
+        {prepared ? <h2>Trabalho de preparação feito!</h2> : <h2>Apenas continue cortando.</h2>}
+      </header>
+    </div>
+  );
 }
 
 export default App;
