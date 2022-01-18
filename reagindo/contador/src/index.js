@@ -4,10 +4,12 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { Numero } from './numeros/Numero';
+import { Cores } from './rgb/Cores';
 ReactDOM.render(
   <React.StrictMode>
     <App />,
     <Numero/>
+    <Cores/>
   </React.StrictMode>,
   document.getElementById('root')
 );
