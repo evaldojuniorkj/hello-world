@@ -1,0 +1,47 @@
+/* reset CSS */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+main {
+    color: gray;
+}
+
+main h1 {
+    color: red;
+    font-size: 3rem;
+    font-weight: normal;
+}
+
+h1 strong {
+    color: black;
+}
+
+section {
+    padding: 3rem 0 4rem 0;
+}
+
+.gray {
+    background-color: #e0dede
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 0 2rem;
+}
+
+.intro p {
+    margin: 1rem 0;
+    font-size: 1.5rem;
+    font-weight: 200;
+}
+
+footer {
+    background-color: rgb(118, 118, 199)
+}
