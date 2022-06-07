@@ -1,7 +1,47 @@
 h4 {
   color: #00856F;
+  font-size: 0.875rem;
 }
 
 body {
-  font-family: sans-serif;
+  font-family: 'DM Sans';
+  font-size: 1.25rem;
+  text-align: center;
+}
+
+header {
+  width: 23.4375rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1 {
+  font-size: 2.125rem;
+  color: #212529;
+  line-height: 130%;
+}
+
+p{
+  font-size: 1.125rem;
+  line-height: 150%;
+}
+
+button {
+  background-color: #00856F;
+  border-radius: 40px;
+  padding: 1rem 2rem;
+  margin-bottom: 2rem;
+  height: 3,25rem;
+  width: 16.4375rem;
+
+  border: none;
+
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 0,875rem;
+  font-weight: 700;
+}
+
+h3 + p {
+  color: #00856F;
 }

@@ -2,7 +2,7 @@ import './App.css'
 import  foto  from './images/foto.svg'
 export function App() {
   return (
-    <div>
+    <header>
       <h4>BOAS-VINDAS A DOCTORCARE 👋</h4>
       <h1>Assistência médica simplificada para todos</h1>
       <p>Os médicos da DoctorCare vão além dos sintomas para tratar a causa raiz de sua doença e proporcionar uma cura a longo prazo.</p>
@@ -22,6 +22,6 @@ export function App() {
 
       <h3>+10</h3>
       <p>Anos no mercado</p>
-    </div>
+    </header>
   )
 }
