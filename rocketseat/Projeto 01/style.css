@@ -1,0 +1,34 @@
+
+body{
+    text-align: center;
+}
+
+#hero {
+    width: 592px;
+    border: solid;
+    margin: auto;
+}
+
+h1, span, a {
+    font-family: 'Open Sans', sans-serif;
+}
+
+span, a{
+    color: #ff9900;
+}
+
+p{
+    color: #707987;
+    line-height: 28px;
+    font-size: 15px;
+}
+
+h1 {
+    font-size: 49px;
+    line-height: 56px;
+    font-weight: normal;
+}
+
+h1 span {
+    font-weight: bold;
+}
